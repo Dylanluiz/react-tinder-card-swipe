@@ -46,7 +46,7 @@ const animateOut = async (gesture, setSpringTarget) => {
     x: finalX,
     y: finalY,
     rot: finalRotation, // set final rotation value based on gesture.vx
-    config: { duration: duration }
+    config: { duration }
   })
 
   // for now animate back
@@ -131,12 +131,8 @@ const TinderCard = React.forwardRef(
             if (!preventSwipe.includes(dir)) {
               if (onSwipe) onSwipe(dir)
 
-              await animateOut(swipeRequirementType === 'velocity' ? ({
-                x: gesture.vx,
-                y: gesture.vy
-              }) : (
-                normalize({ x: gesture.dx, y: gesture.dy }) // Normalize to avoid flicking the card away with super fast speed only direction is wanted here
-              ), setSpringTarget, swipeRequirementType)
+              const outVelocity = swipeRequirementType === 'velocity' ? { x: gesture.vx, y: gesture.vy } : normalize({ x: gesture.dx, y: gesture.dy })
+              await animateOut(outVelocity, setSpringTarget, swipeRequirementType)
               if (onCardLeftScreen) onCardLeftScreen(dir)
               return
             }

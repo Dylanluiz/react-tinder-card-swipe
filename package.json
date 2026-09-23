@@ -1,39 +1,7 @@
 {
-  "name": "react-tinder-card",
+  "name": "react-tinder-card-swipe",
   "version": "1.6.4",
   "description": "A npm react module for making react elements swipeable like in the dating app tinder.",
-  "repository": "3DJakob/react-tinder-card",
-  "license": "MIT",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "useWindowSize.js",
-    "index.native.js"
-  ],
-  "scripts": {
-    "test": "standard && ts-readme-generator --check"
-  },
-  "dependencies": {
-    "p-sleep": "^1.1.0"
-  },
-  "devDependencies": {
-    "@types/react": "^16.9.51",
-    "standard": "^14.3.1",
-    "ts-readme-generator": "^0.7.2"
-  },
-  "peerDependencies": {
-    "@react-spring/native": "^9.5.5",
-    "@react-spring/web": "^9.5.5",
-    "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
-  },
-  "peerDependenciesMeta": {
-    "@react-spring/native": {
-      "optional": true
-    },
-    "@react-spring/web": {
-      "optional": true
-    }
-  },
   "keywords": [
     "tinder",
     "card",
@@ -49,5 +17,48 @@
     "deck",
     "drag",
     "draggable"
-  ]
+  ],
+  "homepage": "https://github.com/3DJakob/react-tinder-card#readme",
+  "bugs": {
+    "url": "https://github.com/3DJakob/react-tinder-card/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3DJakob/react-tinder-card.git"
+  },
+  "license": "MIT",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "useWindowSize.js",
+    "index.native.js"
+  ],
+  "scripts": {
+    "test": "standard && ts-readme-generator --check"
+  },
+  "dependencies": {
+    "p-sleep": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.51",
+    "standard": "^17.1.2",
+    "ts-readme-generator": "^0.7.2"
+  },
+  "peerDependencies": {
+    "@react-spring/native": "^9.5.5",
+    "@react-spring/web": "^9.5.5",
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@react-spring/native": {
+      "optional": true
+    },
+    "@react-spring/web": {
+      "optional": true
+    }
+  }
 }
